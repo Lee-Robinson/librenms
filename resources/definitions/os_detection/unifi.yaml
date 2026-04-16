@@ -1,6 +1,6 @@
 os: unifi
 text: 'Ubiquiti UniFi'
-type: wireless
+type: network
 icon: ubiquiti
 mib_dir: ubnt
 over:
@@ -18,6 +18,9 @@ discovery:
             - '/^E7/'
             - '/^UK/'
             - '/^U-LTE/'
+            - '/Ubiquiti UniFi UDM-Pro/'
+            - '/Ubiquiti UniFi UDM-Pro-Max/'
+            - '/Ubiquiti UniFi.*UDM/'
     -
         sysObjectID: .1.3.6.1.4.1.10002.1
         sysDescr: Linux
@@ -25,3 +28,7 @@ discovery:
             oid: 'IEEE802dot11-MIB::dot11manufacturerProductName'
             op: 'contains'
             value: 'UAP'
+    -
+        sysDescr_regex:
+            - '/Ubiquiti UniFi UDM-Pro/'
+            - '/Ubiquiti UniFi UDM-Pro-Max/'
